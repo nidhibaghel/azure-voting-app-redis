@@ -5,7 +5,8 @@ pipeline {
       stage('Verify Branch') {
          steps {
             echo "$GIT_BRANCH"
-            echo "pwd, $pwd"
+            powershell(script: 'pwd')
+            powershell(script: 'echo $pwd')
          }
       }
    
