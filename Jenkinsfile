@@ -8,7 +8,7 @@ pipeline {
             echo "pwd, $pwd"
          }
       }
-      
+   
       stage('Docker Build') {
          steps {
             powershell(script: 'docker images  ls')
