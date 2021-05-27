@@ -12,7 +12,7 @@ pipeline {
    
       stage('Docker Build') {
          steps {
-            pws(script: 'docker images  ls')
+            pwsh(script: 'docker images  ls')
            
          }
       }
