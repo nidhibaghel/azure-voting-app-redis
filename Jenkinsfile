@@ -13,15 +13,7 @@ pipeline {
       stage('Docker Build') {
          steps {
             powershell(script: 'docker images  ls')
-            powershell(script: """
-               cd azure-vote/
-               pwd
-               echo "pwd"
-               docker images  ls
-               docker build -t . 
-               docker images  ls
-               cd ..
-            """)
+           
          }
       }
       stage('Start test app') {
