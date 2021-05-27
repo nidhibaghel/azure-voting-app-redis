@@ -5,6 +5,7 @@ pipeline {
       stage('Verify Branch') {
          steps {
             echo "$GIT_BRANCH"
+            echo "pwd, $pwd"
          }
       }
       
@@ -16,7 +17,7 @@ pipeline {
                pwd
                echo "pwd"
                docker images  ls
-               docker build -t jenkins-pipeline .
+               docker build -t . 
                docker images  ls
                cd ..
             """)
