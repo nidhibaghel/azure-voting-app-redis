@@ -13,6 +13,8 @@ pipeline {
             powershell(script: 'docker images  ls')
             powershell(script: """
                cd azure-vote/
+               pwd
+               echo "pwd"
                docker images  ls
                docker build -t jenkins-pipeline .
                docker images  ls
